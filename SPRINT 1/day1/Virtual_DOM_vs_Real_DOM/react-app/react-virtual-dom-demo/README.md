@@ -1,16 +1,56 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## ⚙️ 1. Vanilla JS Approach
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📄 File: `vanilla/index.html`
+- Uses **plain JavaScript** to:
+  - Change the document title using `document.title`.
+  - Count and display the number of DOM updates.
+- Demonstrates **manual DOM manipulation**, where the browser updates the actual DOM tree every time.
 
-## React Compiler
+### 🧠 Concept:
+Every time you click the button:
+- The JS code directly changes the DOM.
+- The browser has to reflow and repaint the entire updated section.
+- This can become inefficient with larger apps.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚛️ 2. React (Virtual DOM) Approach
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📄 File: `react-app/src/App.jsx`
+- Uses **React and useState** to:
+  - Manage the title and count as *states*.
+  - Re-render the UI declaratively when states change.
+- The **Virtual DOM** efficiently updates only the changed elements instead of the whole DOM tree.
+
+### 🧠 Concept:
+- You simply update the state (`setTitle`, `setCount`), and React handles the rest.
+- React compares the old and new Virtual DOM and updates only the necessary parts of the Real DOM.
+- This makes the UI updates faster and cleaner.
+
+---
+
+## 🧪 How to Run
+
+### ▶️ Vanilla JS Version:
+1. Open the `vanilla/index.html` file directly in your browser.
+2. Click the **"Change Title"** button.
+3. See how the DOM updates manually each time.
+
+---
+
+### ▶️ React Version:
+1. Navigate to the `react-app/` folder.
+2. Install dependencies:
+   ```bash
+   npm install
+
+   
+🧑‍💻 Author
+Prashant Mishra
+Student at Masai School
+💼 Aspiring Full Stack Web Developer
+
+
