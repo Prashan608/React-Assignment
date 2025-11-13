@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div>
-      {arr.map(ele => ele)};
+      
+      {arr.map((ele, index) => <p key={index}>{ele}</p>)}
+
     </div>
   )
 }
