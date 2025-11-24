@@ -4,16 +4,16 @@ import Navbar from "./components/Navbar";
 import PageContent from "./components/PageContent";
 
 function App() {
-  // State to track which page is currently active
+  // Step 1: State to track which page is active
   const [activePage, setActivePage] = useState("home");
 
   return (
     <>
       <div style={{ textAlign: "center", marginTop: "30px" }}>
-        {/* Navbar: shows navigation buttons */}
+        {/* Step 2: Navbar receives both state and function */}
         <Navbar activePage={activePage} setActivePage={setActivePage} />
 
-        {/* PageContent: displays content based on active page */}
+        {/* Step 3: PageContent receives current active page */}
         <PageContent activePage={activePage} />
       </div>
     </>

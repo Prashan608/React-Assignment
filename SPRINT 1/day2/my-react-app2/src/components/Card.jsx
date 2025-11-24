@@ -1,4 +1,4 @@
-
+import './App.css'
 function Card({title,children}){
    
     return(

@@ -7,7 +7,8 @@ function App() {
 
   return (
     <>
-      <Card title="Profile Card">
+    <div style={{display : "flex", justifyContent :"center", gap:5}}>
+       <Card title="Profile Card">
         <button>click me</button>
         </Card>
       <Card title="Contact Card">
@@ -16,6 +17,8 @@ function App() {
       <Card title = "Project Card">
         <p>Your project is make to do list</p>
       </Card>
+    </div>
+     
     </>
   )
 }

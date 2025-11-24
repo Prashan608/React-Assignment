@@ -9,8 +9,7 @@ function Card({ title, children }) {
         justifyContent: "center",
         backgroundColor: "yellow",
         textAlign: "center",
-        padding: "20px",        // added small padding so content doesn't touch edges
-        margin: "10px"          // optional spacing between cards
+        padding: "20px",        
       }}
     >
       <h1>{title}</h1>

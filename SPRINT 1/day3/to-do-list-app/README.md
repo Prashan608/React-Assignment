@@ -68,7 +68,7 @@ src/
  3:npm start
  
 4. Visit the app at:  
-**http://localhost:3000**
+**http://localhost:5186/**
 
 ---
 
